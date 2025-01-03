@@ -23,11 +23,11 @@
 ### State Space
 - The set of all the states reachable from the initial state by any sequence of actions.
 
-![state space](Images/Pasted%20image%2020241227113412.png)
+![state space](./Images/Pasted%20image%2020241227113412.png)
 
 **Simplified Representation as graph**
 
-![](Images/Pasted%20image%2020241227113502.png)
+![](./Images/Pasted%20image%2020241227113502.png)
 ### Goal Test
 - A way to determine whether a given state is a goal state.
 ### Path Cost
@@ -59,7 +59,7 @@ From a given state, we have multiple options to take. We are going to explore th
 
 1. Find a path from A to E.
 
-![](Images/Pasted%20image%2020250101123136.png)
+![](./Images/Pasted%20image%2020250101123136.png)
 
 Frontier = A
 Step 1: Remove the node from frontier
@@ -82,7 +82,7 @@ Step 2: E is the goal state. Hence, return the solution.
 
 2. Find a path from A to E.
 
-![](Images/Pasted%20image%2020250101123915.png)
+![](./Images/Pasted%20image%2020250101123915.png)
 
 Frontier = A
 Step 1: Remove the node from frontier
@@ -121,7 +121,7 @@ The frontier is a data structure. The order in which we remove the node will be 
 
 1. Find a path from A to E.
 
-![](Images/Pasted%20image%2020250103090318.png)
+![](./Images/Pasted%20image%2020250103090318.png)
 
 Frontier = A
 Step 1: Remove the node from frontier.
@@ -169,7 +169,7 @@ When we use Stack approach, when watching visually, we first go deep on one side
 
 1. Find a path from A to E.
 
-![](Images/Pasted%20image%2020250103090318.png)
+![](./Images/Pasted%20image%2020250103090318.png)
 
 Frontier = A
 Step 1: Remove the node from frontier.
@@ -203,18 +203,18 @@ Step 2: E is the goal state. Hence, return the solution.
 ## Maze Problem
 ### Depth-First Search
 
-![](Images/Pasted%20image%2020250103092351.png)
+![](./Images/Pasted%20image%2020250103092351.png)
 
 - As long as our maze is finite, DFS is going to find a solution.
 - DFS does not necessarily will be the optimal solution. For example, in the following maze, there are multiple solutions. If it chooses the right direction in the first turn, it reaches the goal faster; however, there is not a particular reason for the DFS to choose that first. Alternatively, DFS can choose the other path and make the solution much longer.
 
- ![](Images/Pasted%20image%2020250103092930.png)
+ ![](./Images/Pasted%20image%2020250103092930.png)
 ### Breadth-First Search
 - BFS takes the approach of exploring all the possible paths at the same time. It takes on step on all the sides.
 
-![](Images/Pasted%20image%2020250103093350.png)
+![](./Images/Pasted%20image%2020250103093350.png)
 
 - Although in this case, we need to explore some paths that does not takes us anywhere, the path that we found to the goal, was the optimal path, that is, the shortest way, we can get to the goal.
 - When looking at the bigger maze, although the BFS finds the optimal solution, the trade off is that, it needs to explore a lot of state before reaching the goal.
 
-![](Images/Pasted%20image%2020250103093712.png)
+![](./Images/Pasted%20image%2020250103093712.png)
