@@ -23,17 +23,17 @@
 ### State Space
 - The set of all the states reachable from the initial state by any sequence of actions.
 
-![state space](./Images/Pasted%20image%2020241227113412.png)
+![state space](./images/Pasted%20image%2020241227113412.png)
 
 **Simplified Representation as graph**
 
-![](./Images/Pasted%20image%2020241227113502.png)
+![image](./images/Pasted%20image%2020241227113502.png)
 ### Goal Test
 - A way to determine whether a given state is a goal state.
 ### Path Cost
 - Numerical cost associated with a given path.
 
-![path cost][Images/Pasted%20image%2020241227114014.png]
+![path cost](./images/Pasted%20image%2020241227114014.png)
 ### Solution
 - A sequence of actions that leads from the initial state to a goal state.
 ### Optimal Solution
@@ -59,50 +59,50 @@ From a given state, we have multiple options to take. We are going to explore th
 
 1. Find a path from A to E.
 
-![](./Images/Pasted%20image%2020250101123136.png)
+![image](./images/Pasted%20image%2020250101123136.png)
 
-Frontier = A
-Step 1: Remove the node from frontier
-Step 2: A is not the goal state.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = B.
+Frontier = A  
+Step 1: Remove the node from frontier  
+Step 2: A is not the goal state.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = B.  
 
-Frontier = B
-Step 1: Remove the node from frontier
-Step 2: B is not the goal state.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = C, D.
+Frontier = B  
+Step 1: Remove the node from frontier  
+Step 2: B is not the goal state.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = C, D.  
 
 Frontier = C, D
-Step 1: Remove the node C from the frontier.
-Step 2: C is not the goal state.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = E, D.
+Step 1: Remove the node C from the frontier.  
+Step 2: C is not the goal state.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = E, D.  
 
-Frontier = E, D
-Step 1: Remove the node E from the frontier.
-Step 2: E is the goal state. Hence, return the solution.
+Frontier = E, D  
+Step 1: Remove the node E from the frontier.  
+Step 2: E is the goal state. Hence, return the solution.  
 
 2. Find a path from A to E.
 
-![](./Images/Pasted%20image%2020250101123915.png)
+![image](./images/Pasted%20image%2020250101123915.png)
 
-Frontier = A
-Step 1: Remove the node from frontier
-Step 2: A is not the goal state.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = B.
+Frontier = A  
+Step 1: Remove the node from frontier  
+Step 2: A is not the goal state.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = B.  
 
-Frontier = B
-Step 1: Remove the node from frontier
-Step 2: B is not the goal state.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = A, C, D.
+Frontier = B  
+Step 1: Remove the node from frontier  
+Step 2: B is not the goal state.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = A, C, D.  
 
-Frontier = A, C, D
-Step 1: Remove the node A from the frontier.
-Step 2: A is not the goal state.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = B, C, D.
+Frontier = A, C, D  
+Step 1: Remove the node A from the frontier.  
+Step 2: A is not the goal state.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = B, C, D.  
 
-Frontier = B, C, D
-Step 1: Remove the node from frontier
-Step 2: B is not the goal state.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = A, C, D.
+Frontier = B, C, D  
+Step 1: Remove the node from frontier  
+Step 2: B is not the goal state.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = A, C, D.  
 
 This can get into an infinite loop since it keeps going back and frontend between the two states. The solution to this problem is to keep track of already visited node. Once the state is explored, dont bother to add it back to the frontier.
 
@@ -121,41 +121,41 @@ The frontier is a data structure. The order in which we remove the node will be 
 
 1. Find a path from A to E.
 
-![](./Images/Pasted%20image%2020250103090318.png)
+![image](./images/Pasted%20image%2020250103090318.png)
 
-Frontier = A
-Step 1: Remove the node from frontier.
-Step 2: A is not the goal state.
-Step 3: Add A in the Explored Set, that is, Explored Set = A.
-Step 4: Expand node, adding resulting nodes to the frontier, that is, Frontier = B.
+Frontier = A  
+Step 1: Remove the node from frontier.  
+Step 2: A is not the goal state.  
+Step 3: Add A in the Explored Set, that is, Explored Set = A.  
+Step 4: Expand node, adding resulting nodes to the frontier, that is, Frontier = B.  
 
-Frontier = B
-Step 1: Remove the node from frontier
-Step 2: B is not the goal state.
-Step 3: Add B in the Explored Set, that is, Explored Set = A, B.
-Step 4: Expand node, adding resulting nodes to the frontier, that is, Frontier = C, D.
+Frontier = B  
+Step 1: Remove the node from frontier  
+Step 2: B is not the goal state.  
+Step 3: Add B in the Explored Set, that is, Explored Set = A, B.  
+Step 4: Expand node, adding resulting nodes to the frontier, that is, Frontier = C, D.  
 
-Frontier = C, D
-Step 1: Remove the node D from the frontier. // Removing D and not C because we are following stack approach, that is, last in first out.
-Step 2: D is not the goal state.
-Step 3: Add D in the Explored Set, that is, Explored Set = A, B, D.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = C, F.
+Frontier = C, D  
+Step 1: Remove the node D from the frontier. // Removing D and not C because we are following stack approach, that is, last in first out.  
+Step 2: D is not the goal state.  
+Step 3: Add D in the Explored Set, that is, Explored Set = A, B, D.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = C, F.  
 
-Frontier = C, F
-Step 1: Remove the node F from the frontier.
-Step 2: F is not the goal state.
-Step 3: Add F in the Explored Set, that is, Explored Set = A, B, D, F.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = C.
+Frontier = C, F  
+Step 1: Remove the node F from the frontier.  
+Step 2: F is not the goal state.  
+Step 3: Add F in the Explored Set, that is, Explored Set = A, B, D, F.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = C.  
 
-Frontier = C
-Step 1: Remove the node C from the frontier.
-Step 2: C is not the goal state.
-Step 3: Add C in the Explored Set, that is, Explored Set = A, B, D, F, C.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = E.
+Frontier = C  
+Step 1: Remove the node C from the frontier.  
+Step 2: C is not the goal state.  
+Step 3: Add C in the Explored Set, that is, Explored Set = A, B, D, F, C.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = E.  
 
-Frontier = E
-Step 1: Remove the node E from the frontier.
-Step 2: E is the goal state. Hence, return the solution.
+Frontier = E  
+Step 1: Remove the node E from the frontier.  
+Step 2: E is the goal state. Hence, return the solution.  
 
 When we use Stack approach, when watching visually, we first go deep on one side and then explore the other side. We first go from A -> B -> D -> F -> C -> E. This type of search is called as Depth-First Search.
 ## Depth-First Search (DFS)
@@ -169,52 +169,52 @@ When we use Stack approach, when watching visually, we first go deep on one side
 
 1. Find a path from A to E.
 
-![](./Images/Pasted%20image%2020250103090318.png)
+![image](./images/Pasted%20image%2020250103090318.png)
 
-Frontier = A
-Step 1: Remove the node from frontier.
-Step 2: A is not the goal state.
-Step 3: Add A in the Explored Set, that is, Explored Set = A.
-Step 4: Expand node, adding resulting nodes to the frontier, that is, Frontier = B.
+Frontier = A  
+Step 1: Remove the node from frontier.  
+Step 2: A is not the goal state.  
+Step 3: Add A in the Explored Set, that is, Explored Set = A.  
+Step 4: Expand node, adding resulting nodes to the frontier, that is, Frontier = B.  
 
-Frontier = B
-Step 1: Remove the node from frontier
-Step 2: B is not the goal state.
-Step 3: Add B in the Explored Set, that is, Explored Set = A, B.
-Step 4: Expand node, adding resulting nodes to the frontier, that is, Frontier = C, D.
+Frontier = B  
+Step 1: Remove the node from frontier  
+Step 2: B is not the goal state.  
+Step 3: Add B in the Explored Set, that is, Explored Set = A, B.  
+Step 4: Expand node, adding resulting nodes to the frontier, that is, Frontier = C, D.  
 
-Frontier = C, D
-Step 1: Remove the node C from the frontier. // Removing C and not D because we are following queue approach, that is, first in first out.
-Step 2: C is not the goal state.
-Step 3: Add C in the Explored Set, that is, Explored Set = A, B, C.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = D, E.
+Frontier = C, D  
+Step 1: Remove the node C from the frontier. // Removing C and not D because we are following queue approach, that is, first in first out.  
+Step 2: C is not the goal state.  
+Step 3: Add C in the Explored Set, that is, Explored Set = A, B, C.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = D, E.  
 
-Frontier = D, E
-Step 1: Remove the node D from the frontier.
-Step 2: D is not the goal state.
-Step 3: Add D in the Explored Set, that is, Explored Set = A, B, C, D.
-Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = E, F.
+Frontier = D, E  
+Step 1: Remove the node D from the frontier.  
+Step 2: D is not the goal state.  
+Step 3: Add D in the Explored Set, that is, Explored Set = A, B, C, D.  
+Step 3: Expand node, adding resulting nodes to the frontier, that is, Frontier = E, F.  
 
-Frontier = E, F
-Step 1: Remove the node E from the frontier.
-Step 2: E is the goal state. Hence, return the solution.
+Frontier = E, F  
+Step 1: Remove the node E from the frontier.  
+Step 2: E is the goal state. Hence, return the solution.  
 
 ---
 ## Maze Problem
 ### Depth-First Search
 
-![](./Images/Pasted%20image%2020250103092351.png)
+![image](./images/Pasted%20image%2020250103092351.png)
 
 - As long as our maze is finite, DFS is going to find a solution.
 - DFS does not necessarily will be the optimal solution. For example, in the following maze, there are multiple solutions. If it chooses the right direction in the first turn, it reaches the goal faster; however, there is not a particular reason for the DFS to choose that first. Alternatively, DFS can choose the other path and make the solution much longer.
 
- ![](./Images/Pasted%20image%2020250103092930.png)
+ ![image](./images/Pasted%20image%2020250103092930.png)
 ### Breadth-First Search
 - BFS takes the approach of exploring all the possible paths at the same time. It takes on step on all the sides.
 
-![](./Images/Pasted%20image%2020250103093350.png)
+![image](./images/Pasted%20image%2020250103093350.png)
 
 - Although in this case, we need to explore some paths that does not takes us anywhere, the path that we found to the goal, was the optimal path, that is, the shortest way, we can get to the goal.
 - When looking at the bigger maze, although the BFS finds the optimal solution, the trade off is that, it needs to explore a lot of state before reaching the goal.
 
-![](./Images/Pasted%20image%2020250103093712.png)
+![image](./images/Pasted%20image%2020250103093712.png)
