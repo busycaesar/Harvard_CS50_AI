@@ -1,3 +1,5 @@
+# Search
+
 ## Search Problems
 - Maze => Driving Directions
 - 15 Sliding Tiles
