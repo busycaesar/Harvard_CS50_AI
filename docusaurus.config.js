@@ -14,12 +14,12 @@ const config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
-  url: 'https://github.com',
-  baseUrl: '/Docusaurus_Boilerplate_Code/',
+  url: 'https://busycaesar.github.io',
+  baseUrl: '/',
 
   organizationName: 'busycaesar',
   projectName: 'Docusaurus_Boilerplate_Code',
-  deploymentBranch: "Deployment",
+  deploymentBranch: "Master",
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
