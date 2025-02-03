@@ -14,11 +14,13 @@ const config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
-  url: 'https://shahtech.info',
+  url: 'https://busycaesar.github.io',
   baseUrl: '/',
 
   organizationName: 'busycaesar',
-  projectName: 'docusaurus_template',
+  projectName: 'Docusaurus_Boilerplate_Code',
+  deploymentBranch: "Deployment",
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
