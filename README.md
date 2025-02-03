@@ -1,41 +1,26 @@
-# Website
+# Docusaurus Boilerplate Code
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+## Description
 
-### Installation
+This is the Boilerplate Code to create a static website to publish notes, blogs etc. It uses markdown files to generate website content.
 
-```
-$ yarn
-```
+## Tech Stack
+![Image Alt](https://skillicons.dev/icons?i=md)
 
-### Local Development
+## How it looks?
 
-```
-$ yarn start
-```
+## Features
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+- Converts markdown files into static website.
 
-### Build
+## How to run the project?
 
-```
-$ yarn build
-```
+/ Start the docker container using the `docker-compose.yml` file.
+/ Initiate the interactive terminal of the docker container.
+/ Run the command, `npm run start`.
+/ The website is hosted on port 3000 from inside the container. The port 3000 of the container is mapped to port 3000 of the local machine. Hence, you can check the website from your local machine.
+/ Add files inside `docs/` directory and it will be on the website automatically.
+/ Any code change will also be stored in the `pwd` since the volume of `/website` directory inside the container is mapped to `pwd` of the local machine.
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Author
+[Dev Shah](https://github.com/busycaesar)
