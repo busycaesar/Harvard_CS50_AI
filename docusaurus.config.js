@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://busycaesar.github.io',
-  baseUrl: '/',
+  baseUrl: '/Docusaurus_Boilerplate_Code/',
 
   organizationName: 'busycaesar',
   projectName: 'Docusaurus_Boilerplate_Code',
