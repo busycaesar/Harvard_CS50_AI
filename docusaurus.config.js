@@ -14,8 +14,8 @@ const config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
-  url: 'https://busycaesar.github.io',
-  baseUrl: '/',
+  url: 'https://github.com',
+  baseUrl: '/Docusaurus_Boilerplate_Code/',
 
   organizationName: 'busycaesar',
   projectName: 'Docusaurus_Boilerplate_Code',
