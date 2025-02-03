@@ -15,11 +15,11 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://busycaesar.github.io',
-  baseUrl: '/Docusaurus_Boilerplate_Code',
+  baseUrl: '/Docusaurus_Boilerplate_Code/',
 
   organizationName: 'busycaesar',
   projectName: 'Docusaurus_Boilerplate_Code',
-  deploymentBranch: "Master",
+  deploymentBranch: "Deployment",
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
