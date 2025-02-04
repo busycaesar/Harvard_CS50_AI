@@ -10,7 +10,7 @@ I am following [FreeCodeCamp](https://www.youtube.com/@freecodecamp)'s YouTube v
 
 ## Index
 
-1. [Search](./search/Search.md)
+1. [Search](cs50ai.shahtech.info/search)
 
 ## Author
 
