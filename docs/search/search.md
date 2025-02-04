@@ -1,5 +1,4 @@
 ---
-id: search
 sidebar_position: 2
 title: Search
 ---
@@ -333,6 +332,7 @@ h(n) = estimated cost to goal
 
 - A\* Search is an optimal search algorithm, considering the following conditions:
   - h(n) is admissible. Never overestimates the true cost. It either needs to always be right of how far it is from the goal state or it needs to underestimate.
+  - h(n) is consistent. For every node n and successor n' with step cost c, `h(n) <= h(n') + c`.
 
 ### Minimax
 
