@@ -18,7 +18,7 @@ const config = {
   baseUrl: "/",
 
   organizationName: "busycaesar",
-  projectName: "Docusaurus_Boilerplate_Code",
+  projectName: "Harvard_CS50AI",
   deploymentBranch: "Deployment",
   trailingSlash: false,
 
