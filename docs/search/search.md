@@ -39,17 +39,17 @@ title: Search
 - A description of what state results from performing any applicable action in any state.
 - Result(s, a) returns the state resulting from performing action a in state s.
 
-![transition model](/images/Pasted%20image%2020241226100850.png)
+![transition model](images/Pasted%20image%2020241226100850.png)
 
 ### State Space
 
 - The set of all the states reachable from the initial state by any sequence of actions.
 
-![state space](/images/Pasted%20image%2020241227113412.png)
+![state space](images/Pasted%20image%2020241227113412.png)
 
 **Simplified Representation as graph**
 
-![image](/images/Pasted%20image%2020241227113502.png)
+![image](images/Pasted%20image%2020241227113502.png)
 
 ### Goal Test
 
@@ -59,7 +59,7 @@ title: Search
 
 - Numerical cost associated with a given path.
 
-![path cost](/images/Pasted%20image%2020241227114014.png)
+![path cost](images/Pasted%20image%2020241227114014.png)
 
 ### Solution
 
@@ -91,7 +91,7 @@ Now we need to begin to figure out that how is it that we are going to solve thi
 
 1. Find a path from A to E.
 
-![image](/images/Pasted%20image%2020250101123136.png)
+![image](images/Pasted%20image%2020250101123136.png)
 
 Frontier = A  
 Step 1: Remove the node from frontier  
@@ -114,7 +114,7 @@ Step 2: E is the goal state. Hence, return the solution.
 
 2. Find a path from A to E.
 
-![image](/images/Pasted%20image%2020250101123915.png)
+![image](images/Pasted%20image%2020250101123915.png)
 
 Frontier = A  
 Step 1: Remove the node from frontier  
@@ -149,7 +149,7 @@ This can get into an infinite loop since it keeps going back and frontend betwee
 
 1. Find a path from A to E.
 
-![image](/images/Pasted%20image%2020250103090318.png)
+![image](images/Pasted%20image%2020250103090318.png)
 
 Frontier = A  
 Step 1: Remove the node from frontier.  
@@ -201,7 +201,7 @@ When we use Stack approach, when watching visually, we first go deep on one side
 
 1. Find a path from A to E.
 
-![image](/images/Pasted%20image%2020250103090318.png)
+![image](images/Pasted%20image%2020250103090318.png)
 
 Frontier = A  
 Step 1: Remove the node from frontier.  
@@ -237,23 +237,23 @@ Step 2: E is the goal state. Hence, return the solution.
 
 ### Depth-First Search
 
-![image](/images/Pasted%20image%2020250103092351.png)
+![image](images/Pasted%20image%2020250103092351.png)
 
 - As long as our maze is finite, DFS is going to find a solution.
 - DFS does not necessarily will be the optimal solution. For example, in the following maze, there are multiple solutions. If it chooses the right direction in the first turn, it reaches the goal faster; however, there is not a particular reason for the DFS to choose that first. Alternatively, DFS can choose the other path and make the solution much longer.
 
-![image](/images/Pasted%20image%2020250103092930.png)
+![image](images/Pasted%20image%2020250103092930.png)
 
 ### Breadth-First Search
 
 - BFS takes the approach of exploring all the possible paths at the same time. It takes on step on all the sides.
 
-![image](/images/Pasted%20image%2020250103093350.png)
+![image](images/Pasted%20image%2020250103093350.png)
 
 - Although in this case, we need to explore some paths that does not takes us anywhere, the path that we found to the goal, was the optimal path, that is, the shortest way, we can get to the goal.
 - When looking at the bigger maze, although the BFS finds the optimal solution, the trade off is that, it needs to explore a lot of state before reaching the goal.
 
-![image](/images/Pasted%20image%2020250103093712.png)
+![image](images/Pasted%20image%2020250103093712.png)
 
 ---
 
@@ -275,7 +275,7 @@ Step 2: E is the goal state. Hence, return the solution.
 
 **Heuristic function in case of the maze:**
 
-![heuristic function for maze](/images/Pasted%20image%2020250106114313.png)
+![heuristic function for maze](images/Pasted%20image%2020250106114313.png)
 
 - The heuristic needs to estimate between the two cells, that is C and D, which one is the better to reach the goal.
 - ignoring the walls, geographically, D seems to be the better place.
@@ -284,7 +284,7 @@ Step 2: E is the goal state. Hence, return the solution.
 
 - This is the heuristic function that we are going to use.
 
-![manhattan heuristic function](/images/Pasted%20image%2020250106114838.png)
+![manhattan heuristic function](images/Pasted%20image%2020250106114838.png)
 
 - Only allowing to go vertically or horizontally, how many steps are required from each points to reach the goal state.
 - It turns out the D is much closer to the goal and needs to take less steps than C.
@@ -296,19 +296,19 @@ Step 2: E is the goal state. Hence, return the solution.
 
 **Each cells marked with the Manhattan distance to the goal**
 
-![photo](/images/Pasted%20image%2020250107135356.png)
+![photo](images/Pasted%20image%2020250107135356.png)
 
 - Now, when there is a choice, we can pick up to go to the cell that is more closer to the goal.
 - This time the algorithm makes an informed decision.
 
-![photo](/images/Pasted%20image%2020250107140010.png)
+![photo](images/Pasted%20image%2020250107140010.png)
 
 - Now, we need to come up with a good heuristic.
 - Coming up with a good heuristic, can often time be more challenging.
 - Considering the following maze, GBFS algorithm with find the following path to the goal state.
 - However, the other path is the shortest to the goal state.
 
-![photo](/images/Pasted%20image%2020250107140441.png)
+![photo](images/Pasted%20image%2020250107140441.png)
 
 - The reason why this solution was not great is that, yes the heuristic numbers went down quickly, but they increase again quickly.
 - Alternatively, we could have taken a fewer steps by going to the 13 instead of 11 to reach to the goal state.
@@ -328,7 +328,7 @@ h(n) = estimated cost to goal
 - Following is how the A\* Search algorithm will move considering the sum of both the pieces of information.
 - The final solution that this algorithm finds will be the optimal solution to reach to the goal.
 
-![photo](/images/Pasted%20image%2020250107142153.png)
+![photo](images/Pasted%20image%2020250107142153.png)
 
 - A\* Search is an optimal search algorithm, considering the following conditions:
   - h(n) is admissible. Never overestimates the true cost. It either needs to always be right of how far it is from the goal state or it needs to underestimate.
@@ -350,11 +350,11 @@ h(n) = estimated cost to goal
 
 ### Initial State
 
-![initial state](/images/Pasted%20image%2020250107151909.png)
+![initial state](images/Pasted%20image%2020250107151909.png)
 
 ### Player(s)
 
-![initial state](/images/Pasted%20image%2020250107152015.png)
+![initial state](images/Pasted%20image%2020250107152015.png)
 
 - If the game board is empty, the player function is going to return the function will return X.
 - If the game board where X had made a move, the function is going to return O.
@@ -363,26 +363,26 @@ h(n) = estimated cost to goal
 
 - Takes a state and returns a set of all the possible actions that can be taken from that state.
 
-![photo](/images/Pasted%20image%2020250107152328.png)
+![photo](images/Pasted%20image%2020250107152328.png)
 
 ### Result(s, a)
 
 - When we get state and actions, we need a transition model to tell us when we take the action on a state, what is the new state that we get.
 
-![photo](/images/Pasted%20image%2020250107152615.png)
+![photo](images/Pasted%20image%2020250107152615.png)
 
 ### Terminal(s)
 
 - The AI needs to know how the game works and the AI needs to know when the game is over.
 - This terminal function informs AI if the game is over.
 
-![photo](/images/Pasted%20image%2020250107153733.png)
+![photo](images/Pasted%20image%2020250107153733.png)
 
 ### Utility(s)
 
 - It takes the state s and returns the score or the utility of that state.
 
-![photo](/images/Pasted%20image%2020250107153907.png)
+![photo](images/Pasted%20image%2020250107153907.png)
 
 ## Minimax
 
